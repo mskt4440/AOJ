@@ -1,25 +1,25 @@
 #
-# itp1 04c
+# 4c
 #
 
 
 def main():
     while True:
-        line = input().split()
-        a = int(line[0])
-        op = line[1]
-        b = int(line[2])
-
-        if op == "+":
-            print(a + b)
-        elif op == "-":
-            print(a - b)
-        elif op == "*":
-            print(a * b)
-        elif op == "/":
-            print(a // b)
-        else:
+        a, op, b = input().split()
+        a = int(a)
+        b = int(b)
+        if op == "?":
             break
+        elif op == "+":
+            print(a+b)
+        elif op == "-":
+            print(a-b)
+        elif op == "*":
+            print(a*b)
+        elif op == "/":
+            print(a//b)
+        else:
+            pass
 
 
 if __name__ == '__main__':

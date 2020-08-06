@@ -1,24 +1,21 @@
 #
-# itp1 08c
+# 8c
 #
+import sys
 
 
 def main():
-    import sys
+    A = "abcdefghijklmnopqrstuvwxyz"
+    r = [0 for _ in range(26)]
+    S = sys.stdin.read()
 
-    R = "abcdefghijklmnopqrstuvwxyz"
-    A = [0] * 26
-    T = sys.stdin.read()
-
-    for i in range(len(T)):
-        for j, w in enumerate(R):
-            if T[i] == w or T[i] == w.upper():
-                A[j] += 1
+    for i in range(len(S)):
+        for j in range(len(A)):
+            if S[i].lower() == A[j]:
+                r[j] += 1
                 break
-
-
-for i in range(26):
-    print("{0} : {1}".format(R[i], A[i]))
+    for i in range(26):
+        print(f"{A[i]} : {r[i]}")
 
 
 if __name__ == '__main__':

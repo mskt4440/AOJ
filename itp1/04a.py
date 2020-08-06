@@ -1,11 +1,13 @@
 #
-# itp1 04a
+# 4a
 #
-
 
 def main():
     a, b = map(int, input().split())
-    print("%d %d %0.5f" % (a//b, a % b, a/b))
+    d = a // b
+    r = a % b
+    f = a / b
+    print(f"{d} {r} {f:.5f}")
 
 
 if __name__ == '__main__':

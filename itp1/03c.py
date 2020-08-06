@@ -1,18 +1,16 @@
 #
-# itp1 03c
+# 3c
 #
 
-
 def main():
-    for i in range(10000):
-        a, b = map(int, input().split())
-        if a == 0 and b == 0:
+    while True:
+        x, y = map(int, input().split())
+        if x == y == 0:
             break
+        elif x > y:
+            print(f"{y} {x}")
         else:
-            if a < b:
-                print(a, b)
-            else:
-                print(b, a)
+            print(f"{x} {y}")
 
 
 if __name__ == '__main__':

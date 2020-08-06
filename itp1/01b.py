@@ -1,11 +1,11 @@
 #
-# itp1 01b
+# 1b
 #
 
 
 def main():
     x = int(input())
-    print(x**3)
+    print(x*x*x)
 
 
 if __name__ == '__main__':

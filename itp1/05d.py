@@ -1,29 +1,22 @@
 #
-# itp1 05d
+# 5d
 #
-
 
 def main():
     n = int(input())
-    i = 1
-    ret = ""
-    while True:
+    s = ""
+    for i in range(1, n+1):
         x = i
-        if x % 3 == 0:
-            ret += " " + str(i)
-        elif x % 10 == 3:
-            ret += " " + str(i)
+        if x % 3 == 0 or x % 10 == 3:
+            s += " " + str(i)
         else:
             x //= 10
-            while x != 0:
+            while x:
                 if x % 10 == 3:
-                    ret += " " + str(i)
+                    s += " " + str(i)
                     break
                 x //= 10
-        i += 1
-        if i > n:
-            break
-    print(ret)
+    print(s)
 
 
 if __name__ == '__main__':

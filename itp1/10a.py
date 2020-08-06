@@ -1,13 +1,13 @@
 #
-# itp1 10a
+# 10a
 #
-
 import math
 
 
 def main():
     x1, y1, x2, y2 = map(float, input().split())
-    print(math.sqrt((x2-x1)**2 + (y2-y1)**2))
+    ret = math.sqrt(pow(x1-x2, 2) + pow(y1-y2, 2))
+    print(f"{ret: .8f}")
 
 
 if __name__ == '__main__':

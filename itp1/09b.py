@@ -1,23 +1,17 @@
 #
-# itp1 09b
+# 9b
 #
 
-
 def main():
-    ret = []
     while True:
-        L = input()
-        if L == "-":
+        c = input()
+        if c == "-":
             break
-        elif L.isalpha():
-            M = int(input())
-            for i in range(M):
-                H = int(input())
-                L = L[H:] + L[:H]
-            ret.append(L)
-
-    for r in ret:
-        print(r)
+        m = int(input())
+        for i in range(m):
+            h = int(input())
+            c = c[h:] + c[0:h]
+        print(c)
 
 
 if __name__ == '__main__':

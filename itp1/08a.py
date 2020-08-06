@@ -1,10 +1,10 @@
 #
-# itp1 08a
+# 8a
 #
 
-
 def main():
-    print(input().swapcase())
+    S = input()
+    print(S.swapcase())
 
 
 if __name__ == '__main__':

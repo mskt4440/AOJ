@@ -1,7 +1,6 @@
 #
-# itp1 02b
+# 2b
 #
-
 
 def main():
     a, b, c = map(int, input().split())

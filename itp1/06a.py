@@ -1,18 +1,12 @@
 #
-# itp1 06a
+# 6a
 #
-
 
 def main():
     n = int(input())
-    l = list(map(int, input().split()))
-    l.reverse()
-
-    for i in range(n):
-        if i >= 1:
-            print(" ", end="")
-        print(l[i], end="")
-    print()
+    a = list(map(int, input().split()))
+    a.reverse()
+    print(*a)
 
 
 if __name__ == '__main__':

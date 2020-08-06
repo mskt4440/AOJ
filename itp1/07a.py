@@ -1,29 +1,22 @@
 #
-# itp1 07a
+# 7a
 #
-
 
 def main():
     while True:
         m, f, r = map(int, input().split())
-        if m == -1 and f == -1 and r == -1:
-            exit()
-        ret = ""
-        s = m + f
-        if m == -1 or f == -1 or s < 30:
-            ret = "F"
-        elif s >= 80:
-            ret = "A"
-        elif s >= 65:
-            ret = "B"
-        elif s >= 50:
-            ret = "C"
-        elif r >= 50:
-            ret = "C"
-        else:
-            ret = "D"
-
-        print(ret)
+        if m == f == r == -1:
+            break
+        elif (m == -1 or f == -1) or m+f < 30:
+            print("F")
+        elif m+f >= 80:
+            print("A")
+        elif m+f >= 65:
+            print("B")
+        elif m+f >= 50 or r >= 50:
+            print("C")
+        elif m+f >= 30:
+            print("D")
 
 
 if __name__ == '__main__':

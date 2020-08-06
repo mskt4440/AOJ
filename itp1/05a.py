@@ -1,17 +1,15 @@
 #
-# itp1 05a
+# 5a
 #
-
 
 def main():
     while True:
-        h, w = map(int, input().split())
-        if h == 0 and w == 0:
+        H, W = map(int, input().split())
+        if H == W == 0:
             break
-        else:
-            for i in range(h):
-                print("#" * w)
-            print()
+        for i in range(H):
+            print("#"*W)
+        print()
 
 
 if __name__ == '__main__':

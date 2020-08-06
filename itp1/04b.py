@@ -1,13 +1,14 @@
 #
-# itp1 04b
+# 4b
 #
-
 import math
 
 
 def main():
     r = float(input())
-    print("%.5f %.5f" % (math.pi*(r**2), 2*math.pi*r))
+    S = r * r * math.pi
+    L = 2 * r * math.pi
+    print(f"{S:.6f} {L:.6f}")
 
 
 if __name__ == '__main__':

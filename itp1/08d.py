@@ -1,20 +1,18 @@
 #
-# itp1 08d
+# 8d
 #
 
 
 def main():
-    s = input().rstrip()
-    p = input().rstrip()
+    s = input()
+    p = input()
 
-    ret = "No"
-    for i in range(len(p)):
-        if i == 0 and p in s:
-            ret = "Yes"
-            break
-        elif p[i:] == s[0:len(p)-i] and p[0:i] == s[i*(-1):]:
-            ret = "Yes"
-            break
+    ret = ""
+    s = s + s
+    if p in s:
+        ret = "Yes"
+    else:
+        ret = "No"
     print(ret)
 
 

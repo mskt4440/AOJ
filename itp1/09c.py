@@ -1,22 +1,21 @@
 #
-# itp1 09c
+# 9c
 #
 
-
 def main():
-    a = 0
-    b = 0
+    T = H = 0
     n = int(input())
     for i in range(n):
-        l = input().split()
-        if l[0] == l[1]:
-            a += 1
-            b += 1
-        elif l[0] > l[1]:
-            a += 3
+        t, h = input().split()
+        if t > h:
+            T += 3
+        elif t < h:
+            H += 3
         else:
-            b += 3
-    print(a, b)
+            T += 1
+            H += 1
+
+    print(f"{T} {H}")
 
 
 if __name__ == '__main__':

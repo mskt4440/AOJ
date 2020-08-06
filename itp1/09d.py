@@ -1,20 +1,22 @@
 #
-# itp1 09d
+# 9d
 #
-
 
 def main():
     s = input()
     q = int(input())
     for i in range(q):
-        l = input().split()
+        l = list(input().split())
+        a = int(l[1])
+        b = int(l[2])
         if l[0] == "print":
-            print(s[int(l[1]):int(l[2])+1])
+            print(s[a:b+1])
         elif l[0] == "reverse":
-            s = s[0:int(l[1])] + s[int(l[1]):int(l[2]) +
-                                   1][::-1] + s[int(l[2])+1:]
+            s = s[0:a] + s[a:b+1:][::-1] + s[b+1:]
+        elif l[0] == "replace":
+            s = s[0:a] + l[3] + s[b+1:]
         else:
-            s = s[0: int(l[1])] + l[3] + s[int(l[2])+1:]
+            pass
 
 
 if __name__ == '__main__':

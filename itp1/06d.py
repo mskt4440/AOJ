@@ -1,25 +1,22 @@
 #
-# itp1 06d
+# 6d
 #
 
 
 def main():
     n, m = map(int, input().split())
-
-    a = [0] * n
-    b = [0] * m
-
+    A = [[0 for i in range(m)] for j in range(n)]
+    B = [0 for i in range(m)]
+    C = [0 for i in range(n)]
     for i in range(n):
-        a[i] = list(map(int, input().split()))
-
+        A[i] = list(map(int, input().split()))
     for i in range(m):
-        b[i] = int(input())
+        B[i] = int(input())
 
     for i in range(n):
-        ret = 0
         for j in range(m):
-            ret += a[i][j] * b[j]
-        print(ret)
+            C[i] += A[i][j] * B[j]
+        print(C[i])
 
 
 if __name__ == '__main__':

@@ -1,30 +1,22 @@
 #
-# itp1 07d
+# 7d
 #
-
 
 def main():
     n, m, l = map(int, input().split())
-    a = [[0] * n for i in range(n)]
-    b = [[0] * l for i in range(m)]
-    c = [[0] * l for i in range(n)]
-
+    A = [[0 for i in range(m)] for j in range(n)]
+    B = [[0 for i in range(l)] for j in range(m)]
+    C = [[0 for i in range(l)] for j in range(n)]
     for i in range(n):
-        a[i] = list(map(int, input().split()))
+        A[i] = list(map(int, input().split()))
     for i in range(m):
-        b[i] = list(map(int, input().split()))
-
-    for x in range(n):
-        for y in range(l):
-            for z in range(m):
-                c[x][y] += a[x][z] * b[z][y]
-
-    for x in range(n):
-        for y in range(l):
-            if y == l-1:
-                print(c[x][y])
-            else:
-                print(c[x][y], end=" ")
+        B[i] = list(map(int, input().split()))
+    for i in range(n):
+        for j in range(l):
+            for k in range(m):
+                C[i][j] += A[i][k] * B[k][j]
+    for i in range(n):
+        print(*C[i])
 
 
 if __name__ == '__main__':

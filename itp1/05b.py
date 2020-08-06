@@ -1,19 +1,17 @@
 #
-# itp1 05b
+# 5b
 #
-
 
 def main():
     while True:
-        h, w = map(int, input().split())
-        if h == 0 and w == 0:
+        H, W = map(int, input().split())
+        if H == W == 0:
             break
-        else:
-            for i in range(h):
-                if i == 0 or i == h-1:
-                    print("#" * w)
-                else:
-                    print("#" + "." * (w-2) + "#")
+        for i in range(H):
+            if i == 0 or i == H - 1:
+                print("#" * W)
+            else:
+                print("#" + "." * (W-2) + "#")
         print()
 
 

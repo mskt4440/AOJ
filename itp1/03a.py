@@ -1,10 +1,9 @@
 #
-# itp1 03a
+# 3a
 #
 
-
 def main():
-    for i in range(1000):
+    for _ in range(1000):
         print("Hello World")
 
 

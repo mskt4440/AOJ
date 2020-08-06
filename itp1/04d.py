@@ -1,12 +1,12 @@
 #
-# itp1 04d
+# 4d
 #
 
 
 def main():
     n = int(input())
-    l = list(map(int, input().split()))
-    print(min(l), max(l), sum(l))
+    a = list(map(int, input().split()))
+    print(f"{min(a)} {max(a)} {sum(a)}")
 
 
 if __name__ == '__main__':

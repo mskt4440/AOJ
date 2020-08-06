@@ -1,15 +1,15 @@
 #
-# itp1 03b
+# 3b
 #
 
-
 def main():
-    for i in range(1, 10001):
+    i = 1
+    while True:
         x = int(input())
         if x == 0:
             break
-        else:
-            print("Case %d: %d" % (i, x))
+        print(f"Case {i}: {x}")
+        i += 1
 
 
 if __name__ == '__main__':

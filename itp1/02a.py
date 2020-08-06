@@ -1,11 +1,9 @@
 #
-# itp1 02a
+# 2a
 #
-
 
 def main():
     a, b = map(int, input().split())
-
     if a > b:
         print("a > b")
     elif a < b:

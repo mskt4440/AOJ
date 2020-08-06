@@ -1,5 +1,5 @@
 #
-# itp1 10c
+# 10c
 #
 import math
 
@@ -8,15 +8,13 @@ def main():
     while True:
         n = int(input())
         if n == 0:
-            exit()
-        else:
-            l = list(map(int, input().split()))
-            ave = sum(l) / n
-            S = 0
-            for i in range(n):
-                S += (l[i] - ave) ** 2
-            S /= n
-        print(math.sqrt(S))
+            break
+        s = list(map(int, input().split()))
+        m = sum(s) / n
+        aan = 0
+        for i in range(n):
+            aan += (s[i] - m)**2
+        print(f"{math.sqrt(aan/n):.4f}")
 
 
 if __name__ == '__main__':

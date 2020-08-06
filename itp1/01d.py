@@ -1,15 +1,13 @@
 #
-# itp1 01d
+# 1d
 #
 
-
 def main():
-    time = int(input())
-    sec = time % 60
-    min = (time//60) % 60
-    hour = (time//60)//60
-
-    print(str(hour)+":"+str(min)+":"+str(sec))
+    S = int(input())
+    h = S // 60 // 60
+    m = S // 60 % 60
+    s = S % 60
+    print(f"{h}:{m}:{s}")
 
 
 if __name__ == '__main__':

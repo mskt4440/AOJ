@@ -1,18 +1,16 @@
 #
-# itp1 08b
+# 8a
 #
-
 
 def main():
     while True:
-        l = input().rstrip()
-        if l == "0":
-            exit()
-        else:
-            s = 0
-            for i in range(len(l)):
-                s += int(l[i])
-            print(s)
+        x = input()
+        if x == "0":
+            break
+        r = 0
+        for i in range(len(x)):
+            r += int(x[i])
+        print(r)
 
 
 if __name__ == '__main__':

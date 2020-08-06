@@ -1,25 +1,21 @@
 #
-# itp1 07c
+# 7c
 #
-
 
 def main():
     r, c = map(int, input().split())
-    x = []
+    T = []
+    S = [0 for _ in range(c+1)]
     for i in range(r):
-        l = list(map(int, input().split()))
-        l.append(sum(l))
-        x.append(l)
-    x.append([0] * (c+1))
-
-    for i in range(r+1):
+        C = list(map(int, input().split()))
+        C.append(sum(C))
+        T.append(C)
+    for i in range(r):
         for j in range(c+1):
-            if j == c:
-                print(x[i][j])
-            else:
-                print(x[i][j], end=" ")
-            if i < r+1:
-                x[r][j] += x[i][j]
+            S[j] += T[i][j]
+    T.append(S)
+    for i in range(r+1):
+        print(*T[i])
 
 
 if __name__ == '__main__':

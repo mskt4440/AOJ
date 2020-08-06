@@ -1,12 +1,11 @@
 #
-# itp1 02c
+# 2c
 #
-
 
 def main():
     l = list(map(int, input().split()))
     l.sort()
-    print(l[0], l[1], l[2])
+    print(*l)
 
 
 if __name__ == '__main__':

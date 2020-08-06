@@ -1,21 +1,20 @@
 #
-# itp1 09a
+# 9a
 #
 
-
 def main():
-    W = input()
-    ret = 0
-    flag = 0
-    while flag == 0:
-        L = input().split()
-        for S in L:
-            if S == "END_OF_TEXT":
-                flag = 1
-                break
-            elif S.upper() == W.upper():
-                ret += 1
+    W = input().lower()
+    T = []
+    while True:
+        t = input()
+        if t == "END_OF_TEXT":
+            break
+        T += list(t.lower().split())
 
+    ret = 0
+    for i in range(len(T)):
+        if T[i] == W:
+            ret += 1
     print(ret)
 
 
